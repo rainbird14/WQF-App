@@ -9,25 +9,25 @@ As a team, we will be using "The Evolutionary Process Model", a model we found r
 ### Client and stake holders: 
 Braxton Waggoner with Waggoner Quality Flooring
 
-###Project description: 
+### Project description: 
 We are developing a mobile app that can be used to keep track of and store information. This includes Job hours and location, expenses, orders, work hours, and more. The app will also have a log in with user access control.
 
-###Language and Resources: 
+### Language and Resources: 
 We are using Android Studio which primarily utilizes Java. We will also be using SQL to create and manage the database.
 
-###Goals:
+### Goals:
 
-####Primary Goals - 
+#### Primary Goals - 
 Work Orders, 
 Expenses, 
 Picture of receipts, 
 Job location, 
 Job hours
 
-####Secondary Goals - 
+#### Secondary Goals - 
 Log-in, 
 Employee hours, 
 mileage
 
-####Tertiary Goals - 
+#### Tertiary Goals - 
 Compatibility with iPhone
