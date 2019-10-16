@@ -31,3 +31,6 @@ mileage
 
 #### Tertiary Goals - 
 Compatibility with iPhone
+
+### Requirements Documentation
+ - https://docs.google.com/document/d/1nqWiBhGyEfN6-nsFlu5bG4osut49UG6B/edit
