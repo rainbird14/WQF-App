@@ -35,5 +35,6 @@ Compatibility with iPhone
 ### Requirements Documentation
  - https://drive.google.com/file/d/1nqWiBhGyEfN6-nsFlu5bG4osut49UG6B/view?usp=sharing
  
-### Meeting Minutes
- - https://docs.google.com/document/d/1dnDze5obbDzoXF-JGxqD8plyH3yduuh-OMEF_WPWrB0/edit?usp=sharing
+### Project Folder
+ - https://drive.google.com/open?id=1ejy0izYD3UOo804I78YIDOy7-9itx78nrVGmy0m68mU
+
