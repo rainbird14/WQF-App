@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_invoices"
+        android:icon="@drawable/ic_description_black_24dp"
+        android:title="Invoices" />
+
+    <item
+        android:id="@+id/navigation_clients"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Clients" />
+
+    <item
+        android:id="@+id/navigation_employee_hours"
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:title="Employee Hours" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings" />
+
+</menu>
