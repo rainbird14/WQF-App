@@ -12,11 +12,6 @@
         android:title="Clients" />
 
     <item
-        android:id="@+id/navigation_employee_hours"
-        android:icon="@drawable/ic_access_time_black_24dp"
-        android:title="Employee Hours" />
-
-    <item
         android:id="@+id/navigation_settings"
         android:icon="@drawable/ic_settings_black_24dp"
         android:title="Settings" />
