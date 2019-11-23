@@ -24,25 +24,22 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/wood2"
+        android:gravity="center"
         android:text="New Invoice"
         android:textColor="@color/colorBlack"
-        android:textSize="22dp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:background="@drawable/wood2"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="395dp"
-        android:layout_height="586dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingTextView">
@@ -50,31 +47,450 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/clientTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:text="Client"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
                 app:layout_constraintStart_toEndOf="@+id/scrollView2"
-                tools:layout_editor_absoluteY="94dp"
-                tools:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 android:background="@android:color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/addClientButton"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/wood2"
+                android:text="Add Client"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Description"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/totalTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Total"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/descriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:weightSum="2"
+                app:layout_constraintStart_toEndOf="parent" >
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addItemButton"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/wood2"
+                android:text="Add Item"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/subtotalTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="Subtotal"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/markupTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="right"
+                        android:text="Markup"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/discountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="right"
+                        android:text="Discount"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/taxTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="right"
+                        android:text="Tax"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="145dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+                    <TextView
+                        android:id="@+id/totalLabelTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="right"
+                        android:text="Total"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/subtotalPriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="right"
+                        android:text="$0.00"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/markupPriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="right"
+                        android:text="ADD"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/discountPriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="right"
+                        android:text="ADD"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/taxPriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="right"
+                        android:text="$0.00"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+                    <TextView
+                        android:id="@+id/totalPriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="right"
+                        android:text="$0.00"
+                        tools:ignore="HardcodedText,RtlHardcoded"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/notesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Notes for Client"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/editNotesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Add Notes"
+                android:textColor="@color/colorGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/docInfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Document Info"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clientTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/docInfoTextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/estimateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="Estimate #"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                    app:layout_constraintTop_toBottomOf="@+id/view6"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/estimateNoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="#"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                    app:layout_constraintTop_toBottomOf="@+id/view6"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/editDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="Day, Month 00, Year"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                    app:layout_constraintTop_toBottomOf="@+id/view6"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
         </LinearLayout>
     </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/backButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/headingTextView"
+        app:layout_constraintTop_toTopOf="@+id/headingTextView"
+        app:rippleColor="@color/colorPrimaryDark"
+        android:onClick="goBack"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/doneButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_check_black_24dp"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/headingTextView"
+        app:layout_constraintTop_toTopOf="@+id/headingTextView"
+        app:rippleColor="@color/colorPrimaryDark"
+        android:onClick="done"/>
 
 </android.support.constraint.ConstraintLayout>
