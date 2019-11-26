@@ -23,23 +23,23 @@ public class newInvoiceActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_invoice_view);
-        myDb = new DatabaseHelper(this);
+        //myDb = new DatabaseHelper(this);
 
         //for database
-        editDiscount = (EditText) findViewById(R.id.discountPriceTextView);
-        editNotes = (EditText)findViewById(R.id.editNotesTextView);
-        editDate = (EditText)findViewById(R.id.editDateTextView);
-        editMarkup = (EditText) findViewById(R.id.markupPriceTextView);
-        editInvoiceId = (EditText) findViewById(R.id.estimateNoTextView);
-        btnAddData = (Button)findViewById(R.id.doneButton);
-        //to bue used in invoice list activity
+        //editDiscount = (EditText) findViewById(R.id.discountPriceTextView);
+        //editNotes = (EditText)findViewById(R.id.editNotesTextView);
+        //editDate = (EditText)findViewById(R.id.editDateTextView);
+        //editMarkup = (EditText) findViewById(R.id.markupPriceTextView);
+        //editInvoiceId = (EditText) findViewById(R.id.estimateNoTextView);
+        //btnAddData = (Button)findViewById(R.id.doneButton);
+        //to be used in invoice list activity
         //btnviewAll = (Button)findViewById(R.id.button_viewAll);
         //btnviewUpdate = (Button)findViewById(R.id.button_update);
         //btnDelete = (Button)findViewById(R.id.button_delete);
-        AddData();
-        viewAll();
-        UpdateData();
-        DeleteData();
+        //AddData();
+        //viewAll();
+        //UpdateData();
+        //DeleteData();
     }
 
     public void goBack (View view){
@@ -49,7 +49,7 @@ public class newInvoiceActivity extends Activity {
     public void done (View view) {
         finish();
     }
-
+/*
     //for database
     public void DeleteData() {
         btnDelete.setOnClickListener(
@@ -136,5 +136,5 @@ public class newInvoiceActivity extends Activity {
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
-    }
+    }*/
 }

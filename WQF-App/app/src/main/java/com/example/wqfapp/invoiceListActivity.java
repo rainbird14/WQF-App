@@ -57,7 +57,7 @@ public class invoiceListActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true); //may need to be changed
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        //mAdapter = new MyAdapter(myDataset);
+        //mAdapter = new MyAdapter(null);
         recyclerView.setAdapter(mAdapter);
 
         mTextMessage = findViewById(R.id.message);
