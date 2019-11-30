@@ -3,6 +3,7 @@ package com.example.wqfapp;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +15,7 @@ public class newInvoiceActivity extends Activity {
     //for database
     DatabaseHelper myDb;
     EditText editNotes,editDate,editMarkup, editInvoiceId, editDiscount;
-    Button btnAddData;
-    Button btnviewAll;
+    FloatingActionButton btnAddData;
     Button btnDelete;
     Button btnviewUpdate;
 
@@ -26,18 +26,18 @@ public class newInvoiceActivity extends Activity {
         //myDb = new DatabaseHelper(this);
 
         //for database
-        //editDiscount = (EditText) findViewById(R.id.discountPriceTextView);
-        //editNotes = (EditText)findViewById(R.id.editNotesTextView);
-        //editDate = (EditText)findViewById(R.id.editDateTextView);
-        //editMarkup = (EditText) findViewById(R.id.markupPriceTextView);
-        //editInvoiceId = (EditText) findViewById(R.id.estimateNoTextView);
-        //btnAddData = (Button)findViewById(R.id.doneButton);
+        editDiscount = (EditText) findViewById(R.id.discountPriceEditText);
+        editNotes = (EditText)findViewById(R.id.editNotesEditText);
+        editDate = (EditText)findViewById(R.id.editDateEditText);
+        editMarkup = (EditText) findViewById(R.id.markupPriceEditText);
+        editInvoiceId = (EditText) findViewById(R.id.estimateNoEditText);
+        btnAddData = (FloatingActionButton)findViewById(R.id.doneButton);
         //to be used in invoice list activity
         //btnviewAll = (Button)findViewById(R.id.button_viewAll);
         //btnviewUpdate = (Button)findViewById(R.id.button_update);
         //btnDelete = (Button)findViewById(R.id.button_delete);
-        //AddData();
         //viewAll();
+        AddData();
         //UpdateData();
         //DeleteData();
     }
@@ -49,8 +49,8 @@ public class newInvoiceActivity extends Activity {
     public void done (View view) {
         finish();
     }
-/*
-    //for database
+
+    /*//for database
     public void DeleteData() {
         btnDelete.setOnClickListener(
                 new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class newInvoiceActivity extends Activity {
                     }
                 }
         );
-    }
+    }*/
 
     public void AddData(){
         btnAddData.setOnClickListener(
@@ -103,7 +103,7 @@ public class newInvoiceActivity extends Activity {
                 }
         );
     }
-
+    /* move to invoice list activity
     public void viewAll() {
         btnviewAll.setOnClickListener(
                 new View.OnClickListener() {
@@ -128,7 +128,7 @@ public class newInvoiceActivity extends Activity {
                     }
                 });
 
-    }
+    }*/
 
     public void showMessage(String title, String Message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -136,5 +136,5 @@ public class newInvoiceActivity extends Activity {
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
-    }*/
+    }
 }
