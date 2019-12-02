@@ -65,16 +65,13 @@
         app:layout_constraintStart_toStartOf="parent" >
 
         <Button
-            android:id="@+id/completeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginStart="4dp"
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/wood2"
-            android:text="Add Client"
-            android:textColor="@color/colorBlack"
-            android:textSize="19dp"
-            app:layout_constraintStart_toEndOf="@+id/pendingButton" />
+            android:onClick="goToadd_client_view"
+            android:text="Add Client" />
     </LinearLayout>
 
     <ImageView
