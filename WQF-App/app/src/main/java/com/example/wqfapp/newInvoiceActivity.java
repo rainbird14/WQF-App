@@ -38,8 +38,8 @@ public class newInvoiceActivity extends Activity {
         //btnDelete = (Button)findViewById(R.id.button_delete);
         //viewAll();
         AddData();
-        //UpdateData();
-        //DeleteData();
+        UpdateData();
+        DeleteData();
     }
 
     public void goBack (View view){
@@ -50,7 +50,7 @@ public class newInvoiceActivity extends Activity {
         finish();
     }
 
-    /*//for database
+    //for database
     public void DeleteData() {
         btnDelete.setOnClickListener(
                 new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class newInvoiceActivity extends Activity {
                     }
                 }
         );
-    }*/
+    }
 
     public void AddData(){
         btnAddData.setOnClickListener(
@@ -103,8 +103,8 @@ public class newInvoiceActivity extends Activity {
                 }
         );
     }
-    /* move to invoice list activity
-    public void viewAll() {
+    // move to invoice list activity
+    /*public void viewAll() {
         btnviewAll.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

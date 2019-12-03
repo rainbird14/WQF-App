@@ -259,7 +259,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:gravity="right"
-                        android:text="ADD"
+                        android:hint="ADD"
                         android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText,RtlHardcoded" />
@@ -271,7 +271,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:gravity="right"
-                        android:text="ADD"
+                        android:hint="ADD"
                         android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText,RtlHardcoded" />
@@ -341,7 +341,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="Add Notes"
+                android:hint="Add Notes"
                 android:textColor="@color/colorGrey"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/scrollView2"
